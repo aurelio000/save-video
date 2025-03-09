@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Video</title>
+</head>
+<body>
+    <h2>Upload Video</h2>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="video/*" required>
+        <button type="submit">Upload</button>
+    </form>
+    <br>
+    <a href="{{ url_for('show_videos') }}">Lihat Video yang Diupload</a>
+</body>
+</html>

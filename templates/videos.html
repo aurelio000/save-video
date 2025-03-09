@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Video</title>
+</head>
+<body>
+    <h2>Daftar Video</h2>
+    {% for video in videos %}
+        <div>
+            <video width="320" height="240" controls>
+                <source src="{{ url_for('static', filename='videos/' + video) }}" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+            <p>{{ video }}</p>
+        </div>
+    {% endfor %}
+    <br>
+    <a href="{{ url_for('upload_video') }}">Upload Video Lagi</a>
+</body>
+</html>
